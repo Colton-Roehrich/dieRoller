@@ -1,0 +1,21 @@
+
+
+    <div>
+        <label>roll a d</label>
+        <input type = "text" value="20" #die />
+        <button (click) = "getRandom(die.value)">roll</button>
+        <p>Outcome = {{random}}</p>
+    </div>
+
+<div>
+    <h3>Past Rolls</h3> 
+    <form>
+        <button (click)= "clearPastRolls()" >clear</button>
+    </form>
+    <ul>
+        <li *ngFor = "let roll of rolls">
+            
+            <p> 1d{{roll.dieType}} = {{roll.outcome}}</p>
+        </li>
+    </ul>
+</div>
